@@ -24,8 +24,8 @@ export const site = {
 
   // FILL IN — main business phone. `phone` is used for tel: links (digits only
   // are extracted automatically); `phoneDisplay` is what users see.
-  phone: "(555) 018-2400",
-  phoneDisplay: "(555) 018-2400",
+  phone: "(347) 941-1038",
+  phoneDisplay: "(347) 941-1038",
 
   // FILL IN — primary contact inbox.
   email: "info@noblebidding.com",
