@@ -54,7 +54,7 @@ export function QuoteForm() {
               const loadedTotal = loadedByFile.reduce((sum, n) => sum + n, 0);
               setProgress(Math.round((loadedTotal / totalBytes) * 100));
             },
-          }),
+          }).then((blob) => ({ file, blob })),
         ),
       );
 
@@ -64,10 +64,10 @@ export function QuoteForm() {
         body: JSON.stringify({
           ...values,
           startedAt: startedAt.current,
-          files: uploaded.map((blob, index) => ({
-            filename: files[index].name,
+          files: uploaded.map(({ file, blob }) => ({
+            filename: file.name,
             url: blob.url,
-            size: files[index].size,
+            size: file.size,
           })),
         }),
       });
