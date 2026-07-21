@@ -98,8 +98,7 @@ We may update this Privacy Policy from time to time. When we do, we will revise 
 Questions or requests regarding this policy or your information:
 
 - Email: ${site.email}
-- Phone: ${site.phoneDisplay}
-- Mail: ${site.name}, ${site.address.full}`,
+- Phone: ${site.phoneDisplay}`,
 };
 
 export const terms = {

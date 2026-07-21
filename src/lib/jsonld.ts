@@ -31,14 +31,6 @@ export function localBusinessLd() {
     email: site.email,
     telephone: site.phone,
     priceRange: "$$",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: site.address.street,
-      addressLocality: site.address.city,
-      addressRegion: site.address.state,
-      postalCode: site.address.zip,
-      addressCountry: "US",
-    },
     areaServed: {
       "@type": "Country",
       name: "United States",

@@ -30,17 +30,6 @@ export const site = {
   // FILL IN — primary contact inbox.
   email: "info@noblebidding.com",
 
-  // FILL IN — business address.
-  address: {
-    street: "New York",
-    city: "New York",
-    state: "NY",
-    zip: "10001",
-    get full() {
-      return `${this.street}, ${this.city}, ${this.state}`;
-    },
-  },
-
   // Business hours shown on the contact page.
   hours: "Monday – Friday, 8:00 AM – 6:00 PM ET",
 
@@ -55,9 +44,6 @@ export const site = {
     linkedin: "https://linkedin.com/company/noblebidding",
     instagram: "https://instagram.com/noblebidding",
   },
-
-  // Google Maps embed query — defaults to the address above.
-  mapQuery: "New York, NY 10001",
 
   /** Headline figures reused across hero, metrics band and about page. Real, sourced from company materials. */
   stats: {

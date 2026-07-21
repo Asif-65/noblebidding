@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Phone, Mail, MapPin, Clock, Facebook, Linkedin, Instagram } from "lucide-react";
+import { Phone, Mail, Clock, Facebook, Linkedin, Instagram } from "lucide-react";
 import { buildMetadata } from "@/lib/metadata";
 import { site } from "@/content/site";
 import { telHref } from "@/lib/utils";
@@ -18,12 +18,9 @@ export const metadata: Metadata = buildMetadata({
 const socialIcons = { facebook: Facebook, linkedin: Linkedin, instagram: Instagram } as const;
 
 export default function ContactPage() {
-  const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(site.mapQuery)}&output=embed`;
-
   const details = [
     { icon: Phone, label: "Phone", value: site.phoneDisplay, href: telHref(site.phone), mono: true },
     { icon: Mail, label: "Email", value: site.email, href: `mailto:${site.email}` },
-    { icon: MapPin, label: "Address", value: site.address.full },
     { icon: Clock, label: "Hours", value: site.hours },
   ];
 
@@ -86,18 +83,6 @@ export default function ContactPage() {
                     );
                   })}
                 </div>
-              </div>
-            </Reveal>
-
-            <Reveal delay={0.1}>
-              <div className="overflow-hidden rounded-card border border-mist">
-                <iframe
-                  src={mapSrc}
-                  title={`Map showing ${site.name} location`}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="h-64 w-full border-0"
-                />
               </div>
             </Reveal>
           </div>
