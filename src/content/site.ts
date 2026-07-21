@@ -32,17 +32,17 @@ export const site = {
 
   // FILL IN — business address.
   address: {
-    street: "100 Estimator Way, Suite 200",
-    city: "Austin",
-    state: "TX",
-    zip: "78701",
+    street: "New York",
+    city: "New York",
+    state: "NY",
+    zip: "10001",
     get full() {
       return `${this.street}, ${this.city}, ${this.state} ${this.zip}`;
     },
   },
 
   // Business hours shown on the contact page.
-  hours: "Monday – Friday, 8:00 AM – 6:00 PM CT",
+  hours: "Monday – Friday, 8:00 AM – 6:00 PM ET",
 
   // FILL IN — founding year / years in business.
   founded: 2014,
@@ -57,7 +57,7 @@ export const site = {
   },
 
   // Google Maps embed query — defaults to the address above.
-  mapQuery: "Austin, TX 78701",
+  mapQuery: "New York, NY 10001",
 
   /**
    * Headline figures reused across hero, metrics band and about page.
