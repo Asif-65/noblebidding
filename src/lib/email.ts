@@ -23,8 +23,10 @@ export async function sendEmail({ subject, html, replyTo, attachments }: SendEma
 > {
   const apiKey = process.env.RESEND_API_KEY;
   const to = process.env.CONTACT_TO_EMAIL || site.email;
-  // Use Resend's verified onboarding sender for now (no domain verification needed)
-  const from = `Noble Bidding <onboarding@resend.dev>`;
+  // Requires CONTACT_FROM_EMAIL's domain to be verified in Resend — falls back
+  // to the sandbox sender (which can only deliver to the Resend account's own
+  // signup email) if unset.
+  const from = `Noble Bidding <${process.env.CONTACT_FROM_EMAIL || "onboarding@resend.dev"}>`;
 
   if (!apiKey) {
     // Development fallback — no provider configured.
