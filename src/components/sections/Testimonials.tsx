@@ -59,8 +59,8 @@ export function Testimonials() {
         />
       </Reveal>
 
-      {/* Desktop: static three-up */}
-      <div className="mt-12 hidden gap-5 md:grid md:grid-cols-3">
+      {/* Desktop: static grid, up to three-up */}
+      <div className={cn("mt-12 hidden gap-5 md:grid", testimonials.length >= 3 ? "md:grid-cols-3" : "md:grid-cols-2")}>
         {testimonials.slice(0, 3).map((item, i) => (
           <Reveal key={i} delay={i * 0.08}>
             <Card item={item} />

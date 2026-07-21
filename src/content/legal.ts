@@ -123,7 +123,7 @@ We prepare estimates with professional care using current pricing and standard m
 
 ## Fees and payment
 
-Fees are quoted per bid before work begins. Payment terms are provided with each engagement.
+Fees are quoted before work begins — as a fixed per-project quote, an hourly rate, or a monthly rate for ongoing estimating support. Payment terms are provided with each engagement.
 
 ## Intellectual property
 

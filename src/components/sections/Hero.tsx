@@ -53,7 +53,11 @@ export function Hero() {
                     {"isText" in stat && stat.isText ? (
                       <span className="data">{stat.value}</span>
                     ) : (
-                      <Counter value={Number(stat.value)} suffix={stat.suffix} />
+                      <Counter
+                        value={Number(stat.value)}
+                        prefix={"prefix" in stat ? stat.prefix : undefined}
+                        suffix={stat.suffix}
+                      />
                     )}
                   </dd>
                 </div>
@@ -70,14 +74,14 @@ export function Hero() {
 
           <div className="absolute -left-1 top-6 rounded-card border border-white/10 bg-slate px-4 py-3 shadow-elevation sm:left-2">
             <p className="data text-2xl font-semibold text-brass">
-              <Counter value={hero.floatCards[0].value} suffix={hero.floatCards[0].suffix} />
+              <Counter value={hero.floatCards[0].value} prefix={hero.floatCards[0].prefix} suffix={hero.floatCards[0].suffix} />
             </p>
             <p className="text-xs uppercase tracking-wide text-mist/60">{hero.floatCards[0].label}</p>
           </div>
 
           <div className="absolute -right-1 bottom-6 rounded-card border border-white/10 bg-slate px-4 py-3 shadow-elevation sm:right-2">
             <p className="data text-2xl font-semibold text-brass">
-              <Counter value={hero.floatCards[1].value} suffix={hero.floatCards[1].suffix} />
+              <Counter value={hero.floatCards[1].value} prefix={hero.floatCards[1].prefix} suffix={hero.floatCards[1].suffix} />
             </p>
             <p className="text-xs uppercase tracking-wide text-mist/60">{hero.floatCards[1].label}</p>
           </div>

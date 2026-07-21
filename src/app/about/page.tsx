@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Check } from "lucide-react";
 import { buildMetadata } from "@/lib/metadata";
-import { story, mission, values, differentiators, team } from "@/content/about";
-import { site } from "@/content/site";
+import { story, mission, vision, values, differentiators, team } from "@/content/about";
 import { initials } from "@/lib/utils";
 import { Section } from "@/components/layout/Section";
 import { PageHero } from "@/components/sections/PageHero";
@@ -16,7 +15,7 @@ import { Illustration } from "@/components/ui/Illustration";
 export const metadata: Metadata = buildMetadata({
   title: "About",
   description:
-    "Noble Bidding is an outsourced estimating team for U.S. contractors — the estimating department you could not justify hiring, priced per bid.",
+    "Noble Bidding is an outsourced estimating team for U.S. contractors — the estimating department you could not justify hiring.",
   path: "/about",
 });
 
@@ -26,8 +25,8 @@ export default function AboutPage() {
       <PageHero
         eyebrow="Who we are"
         eyebrowIcon="Users"
-        title="An estimating department, priced per bid"
-        subhead={`In business since ${site.founded}, Noble gives contractors the estimating capacity of a much larger shop — without the payroll.`}
+        title="An estimating department without the payroll"
+        subhead="Noble gives contractors the estimating capacity of a much larger shop — monthly, hourly, or per project, without the payroll."
       />
 
       {/* Story */}
@@ -57,9 +56,15 @@ export default function AboutPage() {
       <Section tone="ink" ruled>
         <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <Reveal>
-            <div className="flex flex-col gap-4">
-              <SectionHeading eyebrow="Mission" title={mission.title} tone="ink" />
-              <p className="text-lg leading-relaxed text-mist/75">{mission.text}</p>
+            <div className="flex flex-col gap-8">
+              <div className="flex flex-col gap-4">
+                <SectionHeading eyebrow="Mission" title={mission.title} tone="ink" />
+                <p className="text-lg leading-relaxed text-mist/75">{mission.text}</p>
+              </div>
+              <div className="flex flex-col gap-4">
+                <SectionHeading eyebrow="Vision" title={vision.title} tone="ink" />
+                <p className="text-lg leading-relaxed text-mist/75">{vision.text}</p>
+              </div>
             </div>
           </Reveal>
           <div className="grid gap-5 sm:grid-cols-2">

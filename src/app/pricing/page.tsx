@@ -17,7 +17,7 @@ import { JsonLd } from "@/components/ui/JsonLd";
 export const metadata: Metadata = buildMetadata({
   title: "Pricing",
   description:
-    "Simple per-bid pricing for construction estimating. Basic, Professional and Enterprise tiers — no retainer, no minimum volume. See what's included.",
+    "Flexible estimating pricing: a dedicated monthly estimator, hourly support, or a fixed per-project quote. No long-term contracts.",
   path: "/pricing",
 });
 
@@ -29,8 +29,8 @@ export default function PricingPage() {
       <PageHero
         eyebrow="Pricing"
         eyebrowIcon="DollarSign"
-        title="Pay per bid, not per salary"
-        subhead="Pricing that tracks the work. No retainer, no minimum, no fixed cost sitting idle in a slow month."
+        title="Estimating support, priced the way you work"
+        subhead="A dedicated monthly estimator, hourly support, or a fixed per-project quote. No long-term contracts, no fixed cost sitting idle in a slow month."
       />
 
       {/* Tiers */}
@@ -105,7 +105,7 @@ export default function PricingPage() {
 
         {/* Included in every package */}
         <Reveal className="mt-16 rounded-card border border-mist bg-white p-8">
-          <h2 className="font-display text-h3 font-bold text-ink">Included in every package</h2>
+          <h2 className="font-display text-h3 font-bold text-ink">Included in every engagement</h2>
           <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {alwaysIncluded.map((item) => (
               <li key={item} className="flex items-start gap-2.5 text-sm text-graphite">

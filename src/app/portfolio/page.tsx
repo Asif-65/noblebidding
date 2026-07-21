@@ -24,9 +24,9 @@ export default function PortfolioPage() {
         subhead="Filter by sector to see the range of work we take off and price — from tenant fit-outs to process facilities."
         stats={[
           { value: projects.length, suffix: "", label: "Projects shown" },
-          { value: site.stats.projects, suffix: "+", label: "Projects estimated" },
-          { value: site.stats.statesServed, label: "States served" },
-          { value: site.stats.accuracyPct, suffix: "%", label: "Estimate accuracy" },
+          { value: site.stats.onTimePct, suffix: "%", label: "On-time delivery" },
+          { value: site.stats.profitMarginPct, suffix: "%", label: "Avg. client profit margin" },
+          { value: site.stats.turnaroundHours, prefix: "≤", suffix: "h", label: "Avg. turnaround" },
         ]}
       />
 

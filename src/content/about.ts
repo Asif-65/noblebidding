@@ -11,14 +11,19 @@ export const story = {
   title: "We built the estimating department contractors could not justify hiring",
   paragraphs: [
     "Noble Bidding started from a simple observation: good contractors were losing work they could have won, not on price, but because they could not turn bids around fast enough. Estimating was the bottleneck, and hiring a full-time estimator was a cost most shops could not justify against uneven volume.",
-    "So we built the alternative. An estimating team you engage per bid — full capacity when the pipeline is full, zero fixed cost when it is not. Contractors send plans; we return a complete, bid-ready package in 24 to 48 hours, built to their rates and markup.",
+    "So we built the alternative: an estimating team that becomes a genuine extension of yours — attending your project meetings, working in your preferred software, and aligned with your workflow from day one. Contractors send plans; we return a complete, bid-ready package in 24 to 48 hours, built to their rates and markup.",
     "Today we support electrical, mechanical, and general contractors across the country, from single-trade takeoffs to multi-trade industrial estimates. The mission has not changed: give every contractor the estimating capacity of a much larger shop.",
   ],
 };
 
 export const mission = {
   title: "Our mission",
-  text: "Give contractors the estimating capacity to bid every job worth bidding — accurately, on deadline, without carrying a department they cannot keep busy.",
+  text: "To provide contractors with world-class estimating services that drive growth, improve bid accuracy, and maximize project profitability.",
+};
+
+export const vision = {
+  title: "Our vision",
+  text: "To be the most trusted partner for companies seeking expert estimating talent — revolutionizing how the industry sources and scales estimating capacity.",
 };
 
 export interface Value {
@@ -51,7 +56,7 @@ export const values: Value[] = [
 ];
 
 export const differentiators: string[] = [
-  "Per-bid pricing — no retainer, no minimum volume",
+  "Flexible pricing — monthly, hourly, or per-project, no long-term contract",
   "24 to 48-hour turnaround on most estimates",
   "A second estimator reviews every total",
   "A signed NDA on every engagement",

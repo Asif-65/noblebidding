@@ -52,7 +52,7 @@ export const services: Service[] = [
     icon: "Handshake",
     title: "Outsourced Estimating",
     summary:
-      "A full estimating department on call, priced per bid instead of per salary.",
+      "A full estimating department on call — monthly, hourly, or per bid, instead of per salary.",
     metaTitle: "Outsourced Construction Estimating Services",
     metaDescription:
       "Outsource your takeoffs and bids to Noble. Get bid-ready estimates in 24 to 48 hours without hiring a full-time estimator.",
@@ -60,7 +60,7 @@ export const services: Service[] = [
       "Hand off the takeoffs and bid math. Keep the relationships and the margins.",
     overview: [
       "Hiring a senior estimator costs six figures a year before benefits. Most small and mid-size contractors do not bid enough volume to keep one busy, but they bid too much to do it well between site visits. Outsourced estimating closes that gap. You send plans; we return a complete, bid-ready package.",
-      "You pay per bid, so the cost tracks the work. Slow month, small invoice. Busy month, we scale up without you adding headcount. Every estimate is built by an estimator who reads your trade, checks quantities twice, and prices against current supplier data, not last year's numbers.",
+      "Pay monthly for a dedicated embedded estimator, hourly for occasional support, or per bid with no ongoing commitment — so the cost tracks the work. Every estimate is built by an estimator who reads your trade, checks quantities twice, and prices against current supplier data, not last year's numbers.",
     ],
     whatsIncluded: [
       "Line-item material takeoff with counts and measurements",

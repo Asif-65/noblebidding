@@ -22,7 +22,7 @@ export function MetricsBand({ metrics = defaultMetrics, heading }: MetricsBandPr
           <h2 className="mb-10 text-center text-h2 font-display font-bold text-white">{heading}</h2>
         </Reveal>
       )}
-      <dl className="grid grid-cols-2 gap-y-8 sm:grid-cols-3 lg:grid-cols-6">
+      <dl className={cn("grid grid-cols-2 gap-y-8", metrics.length >= 6 ? "sm:grid-cols-3 lg:grid-cols-6" : "sm:grid-cols-2 lg:grid-cols-4")}>
         {metrics.map((metric, i) => (
           <Reveal
             key={metric.label}

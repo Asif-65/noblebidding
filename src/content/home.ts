@@ -3,7 +3,7 @@
  * about strip, metrics band, why-us cards, process, deliverables and the
  * software marquee. Also reused by the about page where noted.
  *
- * NOTE: metric figures come from site.stats, which ship as placeholders (§7).
+ * NOTE: metric figures come from site.stats.
  */
 
 import { site } from "@/content/site";
@@ -13,17 +13,17 @@ export const hero = {
   eyebrowIcon: "HardHat",
   title: "Bid-ready construction estimates in 24 to 48 hours",
   subhead:
-    "Noble gives contractors an in-house estimating department without the in-house overhead. Send your plans, get a complete takeoff and bid package back — fast, accurate, priced to win.",
+    "Noble gives contractors an in-house estimating department without the in-house overhead. A dedicated estimator embedded in your team, or a single bid estimated — send your plans and get a complete takeoff and bid package back, fast and accurate.",
   primaryCta: { label: "Get a quote", href: "/get-quote" },
   secondaryCta: { label: "Call now", href: "call" },
   inlineStats: [
-    { value: site.stats.projects, suffix: "+", label: "Projects estimated" },
-    { value: site.stats.yearsExperience, suffix: "+", label: "Years in estimating" },
     { value: site.stats.turnaroundLabel, suffix: "", label: "Typical turnaround", isText: true },
+    { value: site.stats.onTimePct, suffix: "%", label: "On-time delivery" },
+    { value: site.stats.profitMarginPct, suffix: "%", label: "Avg. client profit margin" },
   ],
   floatCards: [
-    { value: site.stats.accuracyPct, suffix: "%", label: "Estimate accuracy" },
-    { value: site.stats.statesServed, suffix: "", label: "States served" },
+    { value: site.stats.avgMonthlyCost, prefix: "$", suffix: "/mo", label: "Avg. monthly cost" },
+    { value: site.stats.turnaroundHours, prefix: "≤", suffix: "h", label: "Avg. turnaround" },
   ],
 } as const;
 
@@ -32,7 +32,7 @@ export const about = {
   title: "An estimating department that scales with your bid volume",
   paragraphs: [
     "Noble Bidding is an outsourced estimating team for contractors across the United States. Contractors send us project plans; we return a complete, bid-ready estimate package inside 24 to 48 hours.",
-    "The pitch is simple. A full-time senior estimator costs six figures before benefits, and most shops do not bid enough volume to keep one busy. We give you that capacity priced per bid, so cost tracks the work.",
+    "The pitch is simple. A full-time senior estimator costs six figures before benefits, and most shops do not bid enough volume to keep one busy. We give you that capacity however you need it — a dedicated estimator embedded in your team month to month, hourly support as needed, or a fixed quote for a single bid.",
     "Every estimate is built by an estimator who reads your trade, counts twice, and prices against current supplier data. The number reads like your own shop produced it, because we build it to your rates and markup.",
   ],
   capabilities: [
@@ -56,14 +56,12 @@ export interface Metric {
   label: string;
 }
 
-/** Six figures that count up in the metrics band. */
+/** Figures that count up in the metrics band. */
 export const metrics: Metric[] = [
-  { value: site.stats.projects, suffix: "+", label: "Projects estimated" },
   { value: site.stats.turnaroundHours, suffix: "h", prefix: "≤", label: "Average turnaround" },
   { value: site.stats.onTimePct, suffix: "%", label: "On-time delivery" },
-  { value: site.stats.accuracyPct, suffix: "%", label: "Estimate accuracy" },
-  { value: site.stats.statesServed, suffix: "", label: "States served" },
-  { value: site.stats.yearsExperience, suffix: "+", label: "Years experience" },
+  { value: site.stats.profitMarginPct, suffix: "%", label: "Avg. client profit margin" },
+  { value: site.stats.avgMonthlyCost, suffix: "/mo", prefix: "$", label: "Avg. monthly cost" },
 ];
 
 export interface WhyCard {
@@ -82,8 +80,8 @@ export const why = {
     },
     {
       icon: "DollarSign",
-      title: "Competitive pricing",
-      description: "Pay per bid, not per salary. Cost scales up and down with your volume.",
+      title: "Flexible pricing",
+      description: "Monthly, hourly, or per project — however you need it, cost scales with your volume.",
     },
     {
       icon: "Target",

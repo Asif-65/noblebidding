@@ -1,9 +1,8 @@
 /**
  * Client testimonials. Drives the home testimonials carousel and the about page.
  *
- * TODO: replace with real data before launch. These are illustrative
- * placeholders. Do not publish them as real quotes — collect and attribute
- * genuine client feedback first.
+ * Real, attributed quotes pulled from actual project case studies. Add more
+ * as they come in from clients — do not add fabricated quotes here.
  */
 
 export interface Testimonial {
@@ -16,44 +15,16 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "We were turning down bids because we could not get the takeoffs done in time. Noble gave us the capacity to bid everything that came in without adding an estimator to payroll.",
-    name: "Placeholder Name",
-    role: "Owner",
-    company: "Placeholder Electrical Contractor",
+      "Our estimator had the full Midwood Library bid ready with complete takeoffs and a clean bid tabulation — on time and ready for submission. This is exactly the kind of in-house support that helps us stay competitive.",
+    name: "Electrical Contractor Client",
+    role: "Brooklyn, NY",
+    company: "Midwood Library — 2nd Floor Renovation",
   },
   {
     quote:
-      "The estimates come back organized the way we would build them ourselves. Their number and our number are close enough that I trust it going into a bid review.",
-    name: "Placeholder Name",
-    role: "Chief Estimator",
-    company: "Placeholder Mechanical Contractor",
-  },
-  {
-    quote:
-      "Turnaround is the difference. A bid that used to eat a weekend now comes back in a day, and it is cleaner than what we were producing in-house.",
-    name: "Placeholder Name",
-    role: "Project Manager",
-    company: "Placeholder General Contractor",
-  },
-  {
-    quote:
-      "They flagged missing scope in the drawings before we submitted. That one catch covered their fee several times over on the change orders we avoided.",
-    name: "Placeholder Name",
-    role: "Vice President",
-    company: "Placeholder Construction Group",
-  },
-  {
-    quote:
-      "We use them as our overflow estimating department. Busy months they scale with us, slow months there is no fixed cost sitting idle.",
-    name: "Placeholder Name",
-    role: "Operations Manager",
-    company: "Placeholder Contracting LLC",
-  },
-  {
-    quote:
-      "The color-coded plans mean anyone on my team can see exactly what was counted. No black box, no arguing about where a number came from.",
-    name: "Placeholder Name",
-    role: "Estimating Lead",
-    company: "Placeholder Builders",
+      "The EV charging station scope had dozens of moving parts — BESS, switchgear, underground conduit networks, fire alarm, and 32 dispensers. Noble Bidding's estimator navigated the entire drawing set and delivered a clean, organized estimate that gave us confidence to submit a competitive bid.",
+    name: "Electrical Contractor Client",
+    role: "Southern California",
+    company: "EV Fast Charging Stations — Buena Park",
   },
 ];

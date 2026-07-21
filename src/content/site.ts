@@ -59,16 +59,11 @@ export const site = {
   // Google Maps embed query — defaults to the address above.
   mapQuery: "New York, NY 10001",
 
-  /**
-   * Headline figures reused across hero, metrics band and about page.
-   * TODO: replace with real data before launch.
-   */
+  /** Headline figures reused across hero, metrics band and about page. Real, sourced from company materials. */
   stats: {
-    projects: 1200,
-    yearsExperience: 12,
-    onTimePct: 98,
-    accuracyPct: 99,
-    statesServed: 48,
+    onTimePct: 100,
+    profitMarginPct: 20, // average client profit margin
+    avgMonthlyCost: 3000, // average monthly cost for dedicated estimating support
     turnaroundHours: 48, // upper bound of the 24–48h window
     turnaroundLabel: "24–48h",
   },

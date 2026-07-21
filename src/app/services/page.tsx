@@ -27,11 +27,11 @@ export default function ServicesPage() {
         eyebrow="What we do"
         eyebrowIcon="Ruler"
         title="Estimating services built for the way you bid"
-        subhead="From a single-trade takeoff to a full multi-trade bid package, priced per bid and delivered in 24 to 48 hours."
+        subhead="From a single-trade takeoff to a full multi-trade bid package, delivered in 24 to 48 hours."
         stats={[
           { value: services.length, label: "Services" },
-          { value: site.stats.projects, suffix: "+", label: "Projects estimated" },
-          { value: site.stats.statesServed, label: "States served" },
+          { value: site.stats.onTimePct, suffix: "%", label: "On-time delivery" },
+          { value: site.stats.profitMarginPct, suffix: "%", label: "Avg. client profit margin" },
           { value: site.stats.turnaroundHours, prefix: "≤", suffix: "h", label: "Turnaround" },
         ]}
       />

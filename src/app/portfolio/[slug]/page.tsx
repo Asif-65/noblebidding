@@ -86,10 +86,12 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           {/* Fact sidebar */}
           <Reveal delay={0.1}>
             <div className="flex flex-col gap-6 rounded-card border border-mist bg-white p-6 shadow-elevation">
-              <div className="flex items-end justify-between border-b border-mist pb-5">
-                <span className="text-xs uppercase tracking-wide text-graphite/60">Project value</span>
-                <span className="data text-2xl font-semibold text-ink">{formatCurrency(project.value)}</span>
-              </div>
+              {project.value !== undefined && (
+                <div className="flex items-end justify-between border-b border-mist pb-5">
+                  <span className="text-xs uppercase tracking-wide text-graphite/60">Project value</span>
+                  <span className="data text-2xl font-semibold text-ink">{formatCurrency(project.value)}</span>
+                </div>
+              )}
               <dl className="flex flex-col gap-4">
                 {facts.map((fact) => (
                   <div key={fact.label} className="flex items-center gap-3">

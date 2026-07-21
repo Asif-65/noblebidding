@@ -1,8 +1,5 @@
 /**
- * Pricing tiers and pricing FAQ. Drives /pricing.
- *
- * TODO: confirm real pricing before launch. The figures below are placeholders
- * expressed as "starting at" per-bid prices — set them to your actual rates.
+ * Pricing tracks and pricing FAQ. Drives /pricing.
  */
 
 export interface PricingTier {
@@ -19,55 +16,53 @@ export interface PricingTier {
 
 export const pricingTiers: PricingTier[] = [
   {
-    name: "Basic",
-    price: "$149",
-    priceSuffix: "/ bid",
-    fit: "For single-trade takeoffs and smaller jobs.",
-    features: [
-      "Quantity takeoff for one trade",
-      "Editable Excel estimate sheet",
-      "Color-coded plan markups",
-      "48-hour turnaround",
-      "Email support",
-    ],
-    cta: "Get started",
-  },
-  {
-    name: "Professional",
-    price: "$349",
-    priceSuffix: "/ bid",
-    fit: "For competitive multi-trade bids that need to win.",
+    name: "Monthly Estimating Support",
+    price: "$3,000",
+    priceSuffix: "/ month",
+    fit: "For contractors who want a dedicated estimator embedded in their team, ongoing.",
     popular: true,
     features: [
-      "Multi-trade takeoff and pricing",
-      "Labor loaded at your crew rates",
-      "Current supplier pricing",
-      "Bid proposal ready to submit",
-      "Assumptions and exclusions list",
-      "24 to 48-hour turnaround",
-      "Priority email and phone support",
+      "Dedicated electrical estimator embedded in your team",
+      "Unlimited estimates within your agreed monthly volume",
+      "Full takeoffs, material pricing and labor analysis on every bid",
+      "Pre-bid preparation and proposal support",
+      "Use of your preferred estimating software",
+      "Dedicated point of contact and ongoing quality assurance",
+      "No long-term contracts",
     ],
     cta: "Get started",
   },
   {
-    name: "Enterprise",
+    name: "Hourly Support",
+    price: "$15",
+    priceSuffix: "/ hour",
+    fit: "For contractors who need estimating help as needed, without a monthly commitment.",
+    features: [
+      "Pay only for the hours you use",
+      "No minimum hours required",
+      "Custom rate available depending on scope and volume",
+      "Same process, software and quality assurance as monthly clients",
+      "Good fit for overflow work or occasional bids",
+    ],
+    cta: "Get started",
+  },
+  {
+    name: "Per-Project Pricing",
     price: "Custom",
     priceSuffix: "",
-    fit: "For high volume and ongoing estimating support.",
+    fit: "For contractors who just need a single bid estimated, no ongoing commitment.",
     features: [
-      "Everything in Professional",
-      "Dedicated estimating coordinator",
-      "Volume pricing per bid",
-      "Standing turnaround commitments",
-      "Custom templates and workflows",
-      "Monthly reporting",
-      "Direct line to your estimator",
+      "Send your drawings and specs for review",
+      "Fixed-price quote based on the scope of work",
+      "No ongoing commitment or contract",
+      "Full takeoff, pricing and a bid-ready package",
+      "Typical turnaround of 24 to 48 hours",
     ],
     cta: "Talk to us",
   },
 ];
 
-/** Shown in the "included in every package" strip below the tiers. */
+/** Shown in the "included in every engagement" strip below the tiers. */
 export const alwaysIncluded: string[] = [
   "Editable Excel workbook",
   "Color-coded plan markups",
@@ -84,14 +79,19 @@ export interface PricingFaq {
 
 export const pricingFaqs: PricingFaq[] = [
   {
-    question: "How is a bid priced?",
+    question: "Which pricing option is right for me?",
     answer:
-      "Most bids fall into the Basic or Professional tier based on trade count and complexity. Larger or recurring work moves to Enterprise. We confirm the exact price before we start, so there is never a surprise on the invoice.",
+      "If you have steady bid volume, Monthly Estimating Support gives you a dedicated estimator embedded in your team for a flat, predictable rate. If your needs are occasional, Hourly Support means you only pay for the time used. If you just need one bid estimated with no ongoing relationship, Per-Project Pricing gets you a fixed quote for that job alone.",
   },
   {
-    question: "Is there a subscription or minimum?",
+    question: "Is there a contract or minimum commitment?",
     answer:
-      "No. There is no retainer and no minimum volume. You pay per bid, one at a time. Enterprise adds volume pricing for shops that send steady work.",
+      "No. There is no long-term contract on any option. Monthly clients can adjust or pause as their pipeline changes, hourly clients use as much or as little time as they need, and per-project clients pay only for the bid they send.",
+  },
+  {
+    question: "How is the monthly rate determined?",
+    answer:
+      "$3,000 per month is our standard rate for dedicated estimating support, and we tailor it based on your expected workload and volume. Tell us your bid pace and trades and we confirm the number before anything starts.",
   },
   {
     question: "What if I need it faster than 48 hours?",
@@ -101,12 +101,12 @@ export const pricingFaqs: PricingFaq[] = [
   {
     question: "Do you offer revisions?",
     answer:
-      "Yes. Every package includes one round of revisions. Addenda issued during a live bid are handled so your submitted number reflects the latest documents.",
+      "Yes. Every engagement includes one round of revisions. Addenda issued during a live bid are handled so your submitted number reflects the latest documents.",
   },
   {
     question: "How do I pay?",
     answer:
-      "We invoice per bid with standard terms. Enterprise clients can move to monthly billing against agreed volume pricing.",
+      "Monthly clients are billed monthly. Hourly clients are invoiced for time used. Per-project clients are invoiced per bid. Standard terms are confirmed with each engagement.",
   },
   {
     question: "What happens after I submit plans?",

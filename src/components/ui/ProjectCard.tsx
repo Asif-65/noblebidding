@@ -34,10 +34,12 @@ export function ProjectCard({ project }: { project: Project }) {
         <p className="flex items-center gap-1.5 text-sm text-graphite/70">
           <MapPin size={14} aria-hidden /> {project.location}
         </p>
-        <div className="mt-2 flex items-center justify-between border-t border-mist pt-3">
-          <span className="text-xs uppercase tracking-wide text-graphite/60">Project value</span>
-          <span className="data text-base font-semibold text-ink">{formatCurrency(project.value)}</span>
-        </div>
+        {project.value !== undefined && (
+          <div className="mt-2 flex items-center justify-between border-t border-mist pt-3">
+            <span className="text-xs uppercase tracking-wide text-graphite/60">Project value</span>
+            <span className="data text-base font-semibold text-ink">{formatCurrency(project.value)}</span>
+          </div>
+        )}
       </div>
     </Link>
   );
