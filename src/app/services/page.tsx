@@ -12,9 +12,9 @@ import { Icon } from "@/components/ui/Icon";
 import { Reveal } from "@/components/ui/Reveal";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Services",
+  title: "Electrical Estimating Services",
   description:
-    "Six electrical estimating services — residential, commercial, industrial, low voltage, power distribution, and instrumentation & controls.",
+    "Electrical estimation services for USA contractors — residential, commercial, industrial, low voltage, power distribution, and instrumentation & controls estimating.",
   path: "/services",
 });
 

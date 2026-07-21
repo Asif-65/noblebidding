@@ -13,9 +13,9 @@ import { Deliverables } from "@/components/sections/Deliverables";
 import { ContactSection } from "@/components/sections/ContactSection";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Noble Bidding — Electrical Estimating & Bidding in 24–48 Hours",
+  title: "Electrical Estimating Services | Noble Bidding",
   description:
-    "Outsourced electrical estimating for U.S. contractors. Send your plans, get a bid-ready takeoff and estimate package back in 24 to 48 hours. Monthly, hourly, or per project.",
+    "Electrical estimation services for contractors across the USA. Send your plans, get a bid-ready electrical takeoff and estimate back in 24 to 48 hours. Monthly, hourly, or per project.",
   path: "/",
 });
 

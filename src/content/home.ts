@@ -31,7 +31,7 @@ export const about = {
   eyebrow: "Who we are",
   title: "An estimating department that scales with your bid volume",
   paragraphs: [
-    "Noble Bidding is an outsourced electrical estimating team for contractors across the United States. Contractors send us project plans; we return a complete, bid-ready estimate package inside 24 to 48 hours.",
+    "Noble Bidding provides electrical estimation services for contractors across the United States. Contractors send us project plans; we return a complete, bid-ready estimate package inside 24 to 48 hours.",
     "The pitch is simple. A full-time senior electrical estimator costs six figures before benefits, and most shops do not bid enough volume to keep one busy. We give you that capacity however you need it — a dedicated estimator embedded in your team month to month, hourly support as needed, or a fixed quote for a single bid.",
     "Every estimate is built by an estimator who reads your drawings, counts twice, and prices against current supplier data. The number reads like your own shop produced it, because we build it to your rates and markup.",
   ],

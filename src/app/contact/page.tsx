@@ -9,9 +9,9 @@ import { ContactForm } from "@/components/forms/ContactForm";
 import { Reveal } from "@/components/ui/Reveal";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact",
+  title: "Contact Our Electrical Estimating Team",
   description:
-    "Get in touch with Noble Bidding. Call, email, or send a message — we reply within two business hours. Have a bid due? Upload your plans.",
+    "Get in touch with Noble Bidding for electrical estimation services. Call, email, or send a message — we reply within two business hours.",
   path: "/contact",
 });
 

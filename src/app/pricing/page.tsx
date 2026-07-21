@@ -15,9 +15,9 @@ import { Reveal } from "@/components/ui/Reveal";
 import { JsonLd } from "@/components/ui/JsonLd";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Pricing",
+  title: "Electrical Estimating Pricing",
   description:
-    "Flexible estimating pricing: a dedicated monthly estimator, hourly support, or a fixed per-project quote. No long-term contracts.",
+    "Electrical estimation services pricing: a dedicated monthly estimator, hourly support, or a fixed per-project quote. No long-term contracts.",
   path: "/pricing",
 });
 

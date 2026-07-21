@@ -9,9 +9,9 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Get a Quote",
+  title: "Get a Free Electrical Estimate",
   description:
-    "Upload your construction plans and get a bid-ready estimate back in 24 to 48 hours. PDF, DWG and DXF accepted. No retainer, no minimum, NDA on request.",
+    "Upload your electrical plans and get a bid-ready estimate back in 24 to 48 hours. PDF, DWG and DXF accepted. No retainer, no minimum, NDA on request.",
   path: "/get-quote",
 });
 

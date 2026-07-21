@@ -8,9 +8,9 @@ import { PortfolioGrid } from "@/components/sections/PortfolioGrid";
 import { CtaBand } from "@/components/sections/CtaBand";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Portfolio",
+  title: "Electrical Estimating Portfolio & Case Studies",
   description:
-    "A sample of estimates behind real bids — commercial, residential and industrial projects across the United States.",
+    "Real electrical estimation case studies — commercial, residential, industrial and EV infrastructure projects estimated for contractors across the USA.",
   path: "/portfolio",
 });
 

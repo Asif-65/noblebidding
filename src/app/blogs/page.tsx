@@ -6,9 +6,9 @@ import { BlogIndex } from "@/components/sections/BlogIndex";
 import { CtaBand } from "@/components/sections/CtaBand";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Blog",
+  title: "Electrical Estimating Blog & Resources",
   description:
-    "Notes on estimating, bidding and running a contracting business — from takeoffs to win rates to the math of hiring an estimator.",
+    "Notes on electrical estimating, bidding and running a contracting business — from takeoffs to win rates to the math of hiring an estimator.",
   path: "/blogs",
 });
 

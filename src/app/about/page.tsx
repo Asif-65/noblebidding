@@ -12,9 +12,9 @@ import { Reveal } from "@/components/ui/Reveal";
 import { StatShowcase } from "@/components/ui/StatShowcase";
 
 export const metadata: Metadata = buildMetadata({
-  title: "About",
+  title: "About Our Electrical Estimating Company",
   description:
-    "Noble Bidding is an outsourced estimating team for U.S. contractors — the estimating department you could not justify hiring.",
+    "Noble Bidding is an electrical estimation company serving contractors across the USA — the in-house estimating department you could not justify hiring full-time.",
   path: "/about",
 });
 
