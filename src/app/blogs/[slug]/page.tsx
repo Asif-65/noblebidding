@@ -75,8 +75,13 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <Section tone="paper">
         <article className="mx-auto max-w-3xl">
           {post.image && (
-            <div className="mb-10 overflow-hidden rounded-card border border-mist">
-              <CoverImage src={post.image} alt={post.title} seed={post.slug} aspect="aspect-[16/9]" priority />
+            <div className="mb-10">
+              <div className="overflow-hidden rounded-card border border-mist">
+                <CoverImage src={post.image} alt={post.title} seed={post.slug} aspect="aspect-[16/9]" priority />
+              </div>
+              {post.imageCredit && (
+                <p className="mt-2 text-right text-xs text-graphite/50">{post.imageCredit}</p>
+              )}
             </div>
           )}
           <p className="mb-8 border-l-2 border-brass pl-4 text-lg leading-relaxed text-graphite">

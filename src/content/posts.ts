@@ -16,6 +16,8 @@ export interface Post {
   date: string;
   /** Optional cover image under /public/images. Omit for a branded placeholder. */
   image?: string;
+  /** Attribution line, required when the image's license mandates credit (e.g. CC BY-SA). Omit for public-domain/CC0 images. */
+  imageCredit?: string;
   featured?: boolean;
   body: string;
 }
@@ -31,6 +33,7 @@ export const posts: Post[] = [
     category: "Bidding",
     author: "Noble Bidding Team",
     date: "2025-03-04",
+    image: "/images/blog/why-contractors-lose-bids.jpg",
     featured: true,
     body: `Most contractors think they lose bids on price. Look closer and the real loss is upstream: the bids that never got submitted because estimating could not turn them around in time.
 
@@ -66,6 +69,8 @@ The result is simple: you submit every bid worth submitting, and your win rate f
     category: "Estimating",
     author: "Noble Bidding Team",
     date: "2025-02-18",
+    image: "/images/blog/what-a-good-takeoff-includes.jpg",
+    imageCredit: "Photo: Mtpanchal, Wikimedia Commons, CC BY-SA 4.0",
     body: `Two estimators can take off the same set of drawings and land a hundred thousand dollars apart. The difference is rarely arithmetic. It is what got counted, how, and what got written down.
 
 ## Counted, not scaled
@@ -99,6 +104,7 @@ A takeoff you can bid on comes back as an editable sheet with the plan markups a
     category: "Electrical",
     author: "Noble Bidding Team",
     date: "2025-01-27",
+    image: "/images/blog/reading-a-panel-schedule.jpg",
     body: `On an electrical bid, the branch wiring gets all the attention and the panel schedule gets a glance. That is backwards. The schedule is where the expensive mistakes hide.
 
 ## Start at the schedule, not the plan
@@ -131,6 +137,7 @@ An electrical estimate that starts at the schedule catches the gear and the feed
     category: "Business",
     author: "Noble Bidding Team",
     date: "2025-01-09",
+    image: "/images/blog/in-house-estimator-versus-outsourcing.jpg",
     body: `Hiring an estimator feels like the obvious move once bidding becomes a bottleneck. Sometimes it is. Often the numbers say otherwise, and it is worth doing the arithmetic before you post the job.
 
 ## The fixed-cost problem
