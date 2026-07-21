@@ -76,6 +76,30 @@ export type QuoteValues = z.infer<typeof quoteSchema>;
 export const MAX_FILE_BYTES = 20 * 1024 * 1024; // 20MB
 export const MAX_FILES = 10;
 
+// Describes a file already uploaded to Blob storage by the client, referenced
+// by URL rather than sent as request-body bytes (Vercel Functions cap request
+// bodies at 4.5MB — well under a single plan set).
+const uploadedFileSchema = z.object({
+  filename: z.string().trim().min(1).max(255),
+  url: z.string().url(),
+  size: z.number().int().nonnegative(),
+});
+
+export const quoteRequestSchema = quoteSchema.extend({
+  files: z.array(uploadedFileSchema).max(MAX_FILES).optional(),
+});
+
+export type UploadedFile = z.infer<typeof uploadedFileSchema>;
+
+/** Only accept blob URLs from our own store — never relay an arbitrary URL a client supplies. */
+export function isTrustedBlobUrl(url: string): boolean {
+  try {
+    return new URL(url).hostname.endsWith(".public.blob.vercel-storage.com");
+  } catch {
+    return false;
+  }
+}
+
 // Accepted extensions and their MIME types. DWG/DXF have inconsistent MIME
 // reporting across browsers, so we accept a permissive set and also fall back
 // to extension checks.

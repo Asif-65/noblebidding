@@ -1,16 +1,10 @@
 import { Resend } from "resend";
 import { site } from "@/content/site";
 
-export interface EmailAttachment {
-  filename: string;
-  content: Buffer;
-}
-
 interface SendEmailInput {
   subject: string;
   html: string;
   replyTo?: string;
-  attachments?: EmailAttachment[];
 }
 
 /**
@@ -18,7 +12,7 @@ interface SendEmailInput {
  * payload is logged and the call resolves as a no-op success — so forms work
  * in local development without any email provider configured (§8).
  */
-export async function sendEmail({ subject, html, replyTo, attachments }: SendEmailInput): Promise<
+export async function sendEmail({ subject, html, replyTo }: SendEmailInput): Promise<
   { ok: true; delivered: boolean } | { ok: false; error: string }
 > {
   const apiKey = process.env.RESEND_API_KEY;
@@ -32,9 +26,6 @@ export async function sendEmail({ subject, html, replyTo, attachments }: SendEma
     // Development fallback — no provider configured.
     console.info("[email] RESEND_API_KEY not set — logging payload instead of sending.");
     console.info(`[email] to=${to} subject="${subject}"`);
-    if (attachments?.length) {
-      console.info(`[email] attachments: ${attachments.map((a) => a.filename).join(", ")}`);
-    }
     return { ok: true, delivered: false };
   }
 
@@ -46,7 +37,6 @@ export async function sendEmail({ subject, html, replyTo, attachments }: SendEma
       subject,
       html,
       replyTo,
-      attachments: attachments?.map((a) => ({ filename: a.filename, content: a.content })),
     });
     if (error) {
       console.error("[email] Resend error:", error);

@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { upload } from "@vercel/blob/client";
 import { CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 import { quoteSchema, type QuoteValues } from "@/lib/validation";
 import { Input } from "@/components/ui/Input";
@@ -32,54 +33,55 @@ export function QuoteForm() {
     startedAt.current = Date.now();
   }, []);
 
-  function onSubmit(values: QuoteValues) {
+  async function onSubmit(values: QuoteValues) {
     setStatus("submitting");
     setProgress(0);
     setServerError(null);
 
-    const formData = new FormData();
-    formData.append("name", values.name);
-    formData.append("email", values.email);
-    formData.append("phone", values.phone);
-    formData.append("zip", values.zip);
-    formData.append("details", values.details);
-    formData.append("startedAt", String(startedAt.current));
-    formData.append("company_website", values.company_website ?? "");
-    files.forEach((file) => formData.append("files", file));
+    try {
+      // Upload straight to Blob storage from the browser — never through this
+      // app's own request body, which Vercel caps at 4.5MB regardless of plan.
+      const loadedByFile = new Array(files.length).fill(0);
+      const totalBytes = files.reduce((sum, f) => sum + f.size, 0) || 1;
 
-    // XHR (not fetch) so we can report real upload progress (§6).
-    const xhr = new XMLHttpRequest();
-    xhr.open("POST", "/api/quote");
+      const uploaded = await Promise.all(
+        files.map((file, index) =>
+          upload(file.name, file, {
+            access: "public",
+            handleUploadUrl: "/api/quote/upload",
+            onUploadProgress: ({ loaded }) => {
+              loadedByFile[index] = loaded;
+              const loadedTotal = loadedByFile.reduce((sum, n) => sum + n, 0);
+              setProgress(Math.round((loadedTotal / totalBytes) * 100));
+            },
+          }),
+        ),
+      );
 
-    xhr.upload.onprogress = (event) => {
-      if (event.lengthComputable) {
-        setProgress(Math.round((event.loaded / event.total) * 100));
+      const res = await fetch("/api/quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...values,
+          startedAt: startedAt.current,
+          files: uploaded.map((blob, index) => ({
+            filename: files[index].name,
+            url: blob.url,
+            size: files[index].size,
+          })),
+        }),
+      });
+      const data = (await res.json()) as { ok?: boolean; error?: string };
+      if (!res.ok || !data.ok) {
+        throw new Error(data.error || "We could not submit your request. Please try again or call us.");
       }
-    };
-
-    xhr.onload = () => {
-      let data: { ok?: boolean; error?: string } = {};
-      try {
-        data = JSON.parse(xhr.responseText);
-      } catch {
-        data = {};
-      }
-      if (xhr.status >= 200 && xhr.status < 300 && data.ok) {
-        setStatus("success");
-        reset();
-        setFiles([]);
-      } else {
-        setStatus("error");
-        setServerError(data.error || "We could not submit your request. Please try again or call us.");
-      }
-    };
-
-    xhr.onerror = () => {
+      setStatus("success");
+      reset();
+      setFiles([]);
+    } catch (err) {
       setStatus("error");
-      setServerError("Network error. Check your connection and try again.");
-    };
-
-    xhr.send(formData);
+      setServerError(err instanceof Error ? err.message : "Something went wrong.");
+    }
   }
 
   if (status === "success") {
