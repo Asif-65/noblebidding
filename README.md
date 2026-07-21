@@ -91,7 +91,9 @@ src/
 
 ## Placeholder imagery
 
-Image slots reference files under `public/images/`. The build ships with inline
-SVG placeholders via the `<Illustration />` component so nothing is broken out
-of the box. Drop real assets into `public/images/` and update the `src` props
-(all centralized where used) to go live.
+Image slots reference files under `public/images/`. Portfolio/blog cards fall
+back to a branded `<CoverImage />` placeholder when no `src` is set, so nothing
+is ever a broken image. Sections that previously used decorative illustration
+art now show real figures via `<StatShowcase />` instead. Drop real assets into
+`public/images/` and update the `src` props (all centralized where used) to go
+live.

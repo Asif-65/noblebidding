@@ -12,7 +12,7 @@ import { ServiceCard } from "@/components/ui/ServiceCard";
 import { Accordion } from "@/components/ui/Accordion";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
-import { Illustration } from "@/components/ui/Illustration";
+import { StatShowcase } from "@/components/ui/StatShowcase";
 import { JsonLd } from "@/components/ui/JsonLd";
 
 export function generateStaticParams() {
@@ -80,8 +80,8 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             </Reveal>
           </div>
           <Reveal delay={0.1}>
-            <div className="rounded-card border border-mist bg-white p-5 shadow-elevation">
-              <Illustration variant="estimate" tone="paper" />
+            <div className="rounded-card border border-mist bg-white p-6 shadow-elevation">
+              <StatShowcase tone="paper" />
             </div>
           </Reveal>
         </div>

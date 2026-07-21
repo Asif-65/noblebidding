@@ -6,7 +6,7 @@ import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { Counter } from "@/components/ui/Counter";
 import { Reveal } from "@/components/ui/Reveal";
-import { Illustration } from "@/components/ui/Illustration";
+import { StatShowcase } from "@/components/ui/StatShowcase";
 
 export function Hero() {
   return (
@@ -64,8 +64,8 @@ export function Hero() {
 
         {/* Right column — illustration with floating stat cards */}
         <Reveal delay={0.16} className="relative px-4 sm:px-8 lg:px-4">
-          <div className="rounded-card border border-white/10 bg-slate/60 p-5 shadow-elevation">
-            <Illustration variant="takeoff" tone="ink" />
+          <div className="rounded-card border border-white/10 bg-slate/60 p-6 shadow-elevation">
+            <StatShowcase tone="ink" />
           </div>
 
           <div className="absolute -left-1 top-6 rounded-card border border-white/10 bg-slate px-4 py-3 shadow-elevation sm:left-2">

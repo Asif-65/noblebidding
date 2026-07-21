@@ -2,7 +2,7 @@ import { deliverables } from "@/content/home";
 import { Section } from "@/components/layout/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
-import { Illustration } from "@/components/ui/Illustration";
+import { StatShowcase } from "@/components/ui/StatShowcase";
 
 export function Deliverables() {
   return (
@@ -32,8 +32,8 @@ export function Deliverables() {
         </div>
 
         <Reveal delay={0.1} className="order-first lg:order-last">
-          <div className="rounded-card border border-white/10 bg-slate/60 p-5 shadow-elevation">
-            <Illustration variant="delivery" tone="ink" />
+          <div className="rounded-card border border-white/10 bg-slate/60 p-6 shadow-elevation">
+            <StatShowcase tone="ink" />
           </div>
         </Reveal>
       </div>

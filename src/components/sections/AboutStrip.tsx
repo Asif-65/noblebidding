@@ -4,7 +4,7 @@ import { Section } from "@/components/layout/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
-import { Illustration } from "@/components/ui/Illustration";
+import { StatShowcase } from "@/components/ui/StatShowcase";
 
 export function AboutStrip() {
   return (
@@ -47,8 +47,8 @@ export function AboutStrip() {
         </div>
 
         <Reveal delay={0.1} className="order-first lg:order-last">
-          <div className="rounded-card border border-mist bg-white p-5 shadow-elevation">
-            <Illustration variant="estimate" tone="paper" />
+          <div className="rounded-card border border-mist bg-white p-6 shadow-elevation">
+            <StatShowcase tone="paper" />
           </div>
         </Reveal>
       </div>

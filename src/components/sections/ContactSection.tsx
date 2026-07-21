@@ -5,7 +5,7 @@ import { telHref } from "@/lib/utils";
 import { Section } from "@/components/layout/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
-import { Illustration } from "@/components/ui/Illustration";
+import { StatShowcase } from "@/components/ui/StatShowcase";
 import { ContactForm } from "@/components/forms/ContactForm";
 
 export function ContactSection() {
@@ -43,8 +43,8 @@ export function ContactSection() {
             </p>
           </Reveal>
 
-          <Reveal delay={0.14} className="hidden lg:block">
-            <Illustration variant="contact" tone="paper" />
+          <Reveal delay={0.14} className="hidden rounded-card border border-mist bg-white p-6 shadow-elevation lg:block">
+            <StatShowcase tone="paper" />
           </Reveal>
         </div>
 
