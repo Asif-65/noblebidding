@@ -53,11 +53,7 @@ export function Hero() {
                     {"isText" in stat && stat.isText ? (
                       <span className="data">{stat.value}</span>
                     ) : (
-                      <Counter
-                        value={Number(stat.value)}
-                        prefix={"prefix" in stat ? stat.prefix : undefined}
-                        suffix={stat.suffix}
-                      />
+                      <Counter value={Number(stat.value)} prefix={stat.prefix} suffix={stat.suffix} />
                     )}
                   </dd>
                 </div>

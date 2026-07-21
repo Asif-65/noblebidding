@@ -17,9 +17,9 @@ export const hero = {
   primaryCta: { label: "Get a quote", href: "/get-quote" },
   secondaryCta: { label: "Call now", href: "call" },
   inlineStats: [
-    { value: site.stats.turnaroundLabel, suffix: "", label: "Typical turnaround", isText: true },
-    { value: site.stats.onTimePct, suffix: "%", label: "On-time delivery" },
-    { value: site.stats.profitMarginPct, suffix: "%", label: "Avg. client profit margin" },
+    { value: site.stats.turnaroundLabel, prefix: undefined as string | undefined, suffix: "", label: "Typical turnaround", isText: true },
+    { value: site.stats.onTimePct, prefix: undefined as string | undefined, suffix: "%", label: "On-time delivery" },
+    { value: site.stats.profitMarginPct, prefix: undefined as string | undefined, suffix: "%", label: "Avg. client profit margin" },
   ],
   floatCards: [
     { value: site.stats.avgMonthlyCost, prefix: "$", suffix: "/mo", label: "Avg. monthly cost" },
