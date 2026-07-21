@@ -1,0 +1,38 @@
+import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
+import { Hero } from "@/components/sections/Hero";
+import { AboutStrip } from "@/components/sections/AboutStrip";
+import { MetricsBand } from "@/components/sections/MetricsBand";
+import { ServicesGrid } from "@/components/sections/ServicesGrid";
+import { WhyUs } from "@/components/sections/WhyUs";
+import { Process } from "@/components/sections/Process";
+import { Testimonials } from "@/components/sections/Testimonials";
+import { SoftwareMarquee } from "@/components/sections/SoftwareMarquee";
+import { PortfolioPreview } from "@/components/sections/PortfolioPreview";
+import { Deliverables } from "@/components/sections/Deliverables";
+import { ContactSection } from "@/components/sections/ContactSection";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Noble Bidding — Construction Bidding & Estimating in 24–48 Hours",
+  description:
+    "Outsourced construction estimating for U.S. contractors. Send your plans, get a bid-ready takeoff and estimate package back in 24 to 48 hours. No retainer, no minimum.",
+  path: "/",
+});
+
+export default function HomePage() {
+  return (
+    <>
+      <Hero />
+      <AboutStrip />
+      <MetricsBand />
+      <ServicesGrid />
+      <WhyUs />
+      <Process />
+      <Testimonials />
+      <SoftwareMarquee />
+      <PortfolioPreview />
+      <Deliverables />
+      <ContactSection />
+    </>
+  );
+}
