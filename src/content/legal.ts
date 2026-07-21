@@ -11,7 +11,7 @@ import { site } from "@/content/site";
 export const privacy = {
   title: "Privacy Policy",
   updated: "July 21, 2026",
-  body: `${site.name} ("${site.name}", "we", "us", or "our") provides construction bidding and cost-estimating services, including electrical estimating and takeoffs, to contractors across the United States. We take the confidentiality of your business, your project documents, and your personal information seriously.
+  body: `${site.name} ("${site.name}", "we", "us", or "our") provides electrical estimating and bidding services, including takeoffs and bid packages, to electrical contractors across the United States. We take the confidentiality of your business, your project documents, and your personal information seriously.
 
 This Privacy Policy explains what information we collect through our website at ${site.domain} and in the course of providing our estimating services, how we use and protect it, who we share it with, and the choices and rights you have. By using our website or engaging our services, you agree to the practices described here.
 
@@ -109,7 +109,7 @@ export const terms = {
 
 ## Our services
 
-Noble Bidding provides construction bidding and cost-estimating services. Estimates we prepare are based on the documents and information you provide and are intended to support your bidding decisions.
+Noble Bidding provides electrical estimating and bidding services. Estimates we prepare are based on the documents and information you provide and are intended to support your bidding decisions.
 
 ## Your responsibilities
 

@@ -9,11 +9,11 @@
 import { site } from "@/content/site";
 
 export const hero = {
-  eyebrow: "Construction bidding specialists",
+  eyebrow: "Electrical estimating specialists",
   eyebrowIcon: "HardHat",
-  title: "Bid-ready construction estimates in 24 to 48 hours",
+  title: "Bid-ready electrical estimates in 24 to 48 hours",
   subhead:
-    "Noble gives contractors an in-house estimating department without the in-house overhead. A dedicated estimator embedded in your team, or a single bid estimated — send your plans and get a complete takeoff and bid package back, fast and accurate.",
+    "Noble gives electrical contractors an in-house estimating department without the in-house overhead. A dedicated estimator embedded in your team, or a single bid estimated — send your plans and get a complete takeoff and bid package back, fast and accurate.",
   primaryCta: { label: "Get a quote", href: "/get-quote" },
   secondaryCta: { label: "Call now", href: "call" },
   inlineStats: [
@@ -31,12 +31,12 @@ export const about = {
   eyebrow: "Who we are",
   title: "An estimating department that scales with your bid volume",
   paragraphs: [
-    "Noble Bidding is an outsourced estimating team for contractors across the United States. Contractors send us project plans; we return a complete, bid-ready estimate package inside 24 to 48 hours.",
-    "The pitch is simple. A full-time senior estimator costs six figures before benefits, and most shops do not bid enough volume to keep one busy. We give you that capacity however you need it — a dedicated estimator embedded in your team month to month, hourly support as needed, or a fixed quote for a single bid.",
-    "Every estimate is built by an estimator who reads your trade, counts twice, and prices against current supplier data. The number reads like your own shop produced it, because we build it to your rates and markup.",
+    "Noble Bidding is an outsourced electrical estimating team for contractors across the United States. Contractors send us project plans; we return a complete, bid-ready estimate package inside 24 to 48 hours.",
+    "The pitch is simple. A full-time senior electrical estimator costs six figures before benefits, and most shops do not bid enough volume to keep one busy. We give you that capacity however you need it — a dedicated estimator embedded in your team month to month, hourly support as needed, or a fixed quote for a single bid.",
+    "Every estimate is built by an estimator who reads your drawings, counts twice, and prices against current supplier data. The number reads like your own shop produced it, because we build it to your rates and markup.",
   ],
   capabilities: [
-    "Takeoffs across all major trades",
+    "Electrical takeoffs across residential, commercial, industrial and EV infrastructure",
     "Labor loaded at your crew rates",
     "Pricing from current supplier data",
     "Editable Excel workbooks",
@@ -91,7 +91,7 @@ export const why = {
     {
       icon: "Users",
       title: "Experienced team",
-      description: "Estimators who read your trade and build to your crew rates and markup.",
+      description: "Estimators who read your drawings and build to your crew rates and markup.",
     },
     {
       icon: "TrendingUp",
@@ -162,8 +162,8 @@ export const softwareStack: string[] = [
 
 export const servicesIntro = {
   eyebrow: "What we do",
-  title: "Estimating built for the way you bid",
-  subhead: "Thirteen services across estimating, electrical, documentation and every sector.",
+  title: "Electrical estimating built for the way you bid",
+  subhead: "Six services across residential, commercial, industrial and every electrical system.",
 } as const;
 
 export const portfolioIntro = {

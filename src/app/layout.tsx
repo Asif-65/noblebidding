@@ -33,7 +33,7 @@ const mono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${site.name} — Construction Bidding & Estimating Services`,
+    default: `${site.name} — Electrical Estimating & Bidding Services`,
     template: `%s`,
   },
   description: site.description,

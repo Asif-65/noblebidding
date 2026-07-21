@@ -14,7 +14,7 @@ import { Reveal } from "@/components/ui/Reveal";
 export const metadata: Metadata = buildMetadata({
   title: "Services",
   description:
-    "Thirteen construction estimating services — outsourced and professional estimating, takeoffs, electrical, drafting, shop drawings, and residential, commercial and industrial work.",
+    "Six electrical estimating services — residential, commercial, industrial, low voltage, power distribution, and instrumentation & controls.",
   path: "/services",
 });
 
@@ -26,8 +26,8 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="What we do"
         eyebrowIcon="Ruler"
-        title="Estimating services built for the way you bid"
-        subhead="From a single-trade takeoff to a full multi-trade bid package, delivered in 24 to 48 hours."
+        title="Electrical estimating services built for the way you bid"
+        subhead="From a single-family takeoff to a full industrial electrical package, delivered in 24 to 48 hours."
         stats={[
           { value: services.length, label: "Services" },
           { value: site.stats.onTimePct, suffix: "%", label: "On-time delivery" },

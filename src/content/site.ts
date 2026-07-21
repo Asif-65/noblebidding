@@ -20,7 +20,7 @@ export const site = {
 
   // Used for meta descriptions and Organization schema.
   description:
-    "Noble Bidding delivers bid-ready construction estimates for contractors across the United States. Send your plans, get a complete takeoff and bid package back in 24 to 48 hours.",
+    "Noble Bidding delivers bid-ready electrical estimates for contractors across the United States. Send your plans, get a complete takeoff and bid package back in 24 to 48 hours.",
 
   // FILL IN — main business phone. `phone` is used for tel: links (digits only
   // are extracted automatically); `phoneDisplay` is what users see.

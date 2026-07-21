@@ -6,15 +6,16 @@ import { z } from "zod";
  * runs again in app/api/*.
  */
 
-// Project types offered in the contact/quote selects. Keep in sync with
-// content where these are rendered.
+// Project types offered in the contact form select. Keep in sync with
+// src/content/services.ts.
 export const PROJECT_TYPES = [
-  "Electrical",
-  "Mechanical / HVAC",
-  "Plumbing",
-  "General Contracting",
+  "Residential Electrical",
+  "Commercial Electrical",
+  "Industrial Electrical",
   "Low Voltage",
-  "Civil / Sitework",
+  "Power Distribution",
+  "Instrumentation & Controls",
+  "EV Infrastructure",
   "Other",
 ] as const;
 

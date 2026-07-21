@@ -12,18 +12,18 @@ export const story = {
   paragraphs: [
     "Noble Bidding started from a simple observation: good contractors were losing work they could have won, not on price, but because they could not turn bids around fast enough. Estimating was the bottleneck, and hiring a full-time estimator was a cost most shops could not justify against uneven volume.",
     "So we built the alternative: an estimating team that becomes a genuine extension of yours — attending your project meetings, working in your preferred software, and aligned with your workflow from day one. Contractors send plans; we return a complete, bid-ready package in 24 to 48 hours, built to their rates and markup.",
-    "Today we support electrical, mechanical, and general contractors across the country, from single-trade takeoffs to multi-trade industrial estimates. The mission has not changed: give every contractor the estimating capacity of a much larger shop.",
+    "Today we support electrical contractors across the country, from single-family residential takeoffs to multi-system industrial estimates. The mission has not changed: give every electrical contractor the estimating capacity of a much larger shop.",
   ],
 };
 
 export const mission = {
   title: "Our mission",
-  text: "To provide contractors with world-class estimating services that drive growth, improve bid accuracy, and maximize project profitability.",
+  text: "To provide electrical contractors with world-class estimation services that drive growth, improve bid accuracy, and maximize project profitability.",
 };
 
 export const vision = {
   title: "Our vision",
-  text: "To be the most trusted partner for companies seeking expert estimating talent — revolutionizing how the industry sources and scales estimating capacity.",
+  text: "To be the most trusted partner for electrical companies seeking expert estimating talent — revolutionizing how the industry sources and scales estimating capacity.",
 };
 
 export interface Value {
@@ -61,7 +61,7 @@ export const differentiators: string[] = [
   "A second estimator reviews every total",
   "A signed NDA on every engagement",
   "Built to your labor rates, burden and markup",
-  "Coverage across all major trades and sectors",
+  "Coverage across residential, commercial, industrial and EV infrastructure electrical work",
 ];
 
 export interface TeamMember {
@@ -88,7 +88,7 @@ export const team: TeamMember[] = [
   },
   {
     name: "Placeholder Name",
-    role: "Drafting & Documentation Lead",
-    bio: "Placeholder bio — leads shop drawings, as-builts and coordination sheets.",
+    role: "Industrial & EV Systems Estimator",
+    bio: "Placeholder bio — specializes in industrial distribution, controls and EV infrastructure takeoffs.",
   },
 ];

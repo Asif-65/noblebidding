@@ -114,7 +114,7 @@ export default function AboutPage() {
           <SectionHeading
             eyebrow="Our team"
             title="The estimators behind your bid"
-            subhead="A team that reads your trade and treats your deadline as the deadline."
+            subhead="A team that reads your drawings and treats your deadline as the deadline."
             tone="paper"
           />
         </Reveal>
